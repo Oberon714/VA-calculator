@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VA Combined Disability Calculator</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+  <h1>VA Combined Disability Calculator</h1>
+  <p class="subtitle">Enter each rated disability to estimate the combined VA disability percentage, including the bilateral factor for paired arms/legs.</p>
+
+  <div class="card">
+    <h2>Rated Disabilities</h2>
+    <p class="hint">Select a body part only if the condition affects a left/right arm or leg — this is what triggers the bilateral factor.</p>
+    <table class="rows-table">
+      <thead>
+        <tr>
+          <th class="col-desc">Condition</th>
+          <th class="col-part">Body part</th>
+          <th class="col-pct">Rating</th>
+          <th class="col-remove"></th>
+        </tr>
+      </thead>
+      <tbody id="rows-body"></tbody>
+    </table>
+    <button type="button" class="btn-add" id="add-row">+ Add disability</button>
+  </div>
+
+  <div class="card">
+    <div class="results-grid">
+      <div class="stat-tile">
+        <p class="stat-label">Final combined rating</p>
+        <div class="stat-value" id="final-value">0%</div>
+        <div class="meter-track">
+          <div class="meter-fill" id="meter-fill" style="width: 0%"></div>
+        </div>
+        <p class="meter-caption" id="meter-caption">Rounded to the nearest 10%, per VA rules.</p>
+      </div>
+      <div class="breakdown">
+        <h3>How it was calculated</h3>
+        <div id="bilateral-note-slot"></div>
+        <div id="breakdown-slot"></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="disclaimer">
+    This tool applies the VA Combined Ratings Table formula (38 CFR &sect;4.25) and the bilateral factor (38 CFR &sect;4.26) as a general-purpose estimate. It does not account for every regulatory nuance (e.g. special monthly compensation, TDIU, or specific paired-muscle-group rules) and is not an official VA determination.
+  </p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
