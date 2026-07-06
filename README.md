@@ -12,6 +12,8 @@ automatically when both sides of a pair are entered. The final combined
 rating, rounded to the nearest 10%, is shown along with a step-by-step
 breakdown of how it was calculated.
 
+or use the following link: https://oberon714.github.io/VA-calculator/
+
 This is an estimation tool for informational purposes only and is not an
 official VA determination.
 
